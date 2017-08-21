@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="com.anythingintellect.unsplashed.viewmodel.ItemSplashImageViewModel"/>
+    </data>
+    <com.anythingintellect.networklib.view.NetworkImageView
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:scaleType="center"
+        bind:loadingResource="@{@drawable/ic_loading}"
+        bind:imgUrl="@{vm.splashImg.imgUrl}"
+        bind:requestManager="@{vm.requestManager}"
+        android:layout_height="300dp" />
+
+</layout>
